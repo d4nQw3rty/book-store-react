@@ -4,6 +4,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import BooksContainer from './components/BooksContainer';
 import Categories from './components/Categories';
+// import BooksContainer from './components/BooksContainer';
+// import Categories from './components/Categories';
 
 const App = () => (
   <Router className="App">

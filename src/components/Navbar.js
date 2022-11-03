@@ -5,7 +5,7 @@ const links = [
   {
     id: 1,
     path: '/',
-    text: 'Home',
+    text: 'Books',
   },
   {
     id: 2,
@@ -14,21 +14,24 @@ const links = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = () => (
   <>
     <header>
       <h1>Bookstore CMS</h1>
       <nav>
-        <ul>
+        <ul className="list">
           {links.map((link) => (
             <li key={link.id}>
-              <NavLink to={link.path} exact>{link.text}</NavLink>
+              <NavLink to={link.path}>
+                { link.text }
+              </NavLink>
             </li>
           ))}
+
         </ul>
       </nav>
     </header>
-  </>;
-};
+  </>
+);
 
 export default Navbar;
