@@ -1,9 +1,11 @@
 import React from 'react';
 import BookList from './BookList';
+import BookInput from './BookInput';
 
 const BooksContainer = () => (
   <div>
-    <BookList/>    
+    <BookList/>
+    <BookInput />    
   </div>
 );
 
