@@ -6,7 +6,7 @@ export const checkStatus = (payload) => ({
   payload,
 });
 // Define Reducer
-const initialState = 'Under Construction';
+const initialState = [];
 const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
