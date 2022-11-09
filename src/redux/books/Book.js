@@ -2,7 +2,7 @@
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_BOOKS = 'GET_BOOKS';
-const API_URL = 'https://mocki.io/v1/e143ba3b-b469-444a-97fc-a70c9850ebd9'
+const API_URL = 'https://mocki.io/v1/e143ba3b-b469-444a-97fc-a70c9850ebd9';
 
 // action creators
 const addBook = (book) => ({
@@ -34,6 +34,8 @@ const booksReducer = (state = initialState, action) => {
       return [...state, action.payload];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload);
+    case GET_BOOKS:
+      return action.payload;
     default:
       return state;
   }
