@@ -2,7 +2,9 @@
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_BOOKS = 'GET_BOOKS';
-const API_URL = 'https://mocki.io/v1/e143ba3b-b469-444a-97fc-a70c9850ebd9';
+const BASE_API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
+const APP_ID = '/apps/0EQ64nuLJV8kcH5qMok9';
+const API_URL = `${BASE_API}${APP_ID}`;
 
 // action creators
 const addBook = (book) => ({
@@ -24,7 +26,19 @@ const getBooks = () => async (dispatch) => {
   });
 };
 
-export { addBook, removeBook, getBooks };
+const removeBookAPI = (id) => async (dispatch) => {
+  await fetch(`${API_URL}/${id}`, {
+    method: 'DELETE',
+  });
+  dispatch(removeBook(id));
+};
+
+export {
+  addBook,
+  removeBook,
+  getBooks,
+  removeBookAPI,
+};
 
 // Reducer
 const initialState = [];
