@@ -1,15 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const BookIem = () => (
-  <li>
+const BookIem = () => {
+  const books = useSelector((state) => state.books);
+  return (
     <div>
-      <div>
-        <h3>Title 1</h3>
-        <p>Author 1</p>
-      </div>
-      <button type="button">Remove</button>
+      {books.map((book) => (
+        <div key={book.id}>
+          <h1>{book.title}</h1>
+          <p>{book.category}</p>
+        </div>
+      ))}
     </div>
-  </li>
-);
+  );
+};
 
 export default BookIem;
