@@ -1,7 +1,7 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
-// import { v4 as uuidv4 } from 'uuid';
-// import { addBook } from '../redux/books/Book';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/Book';
 
 const BookInput = () => (
   <div>
