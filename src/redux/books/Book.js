@@ -18,18 +18,18 @@ export { addBook, removeBook };
 // Reducer
 const initialState = [
   {
-    title: 'pet cementery',
-    author: 'stephen king',
+    title: 'Divergent',
+    author: 'Veronica Roth',
     id: 1,
   },
   {
-    title: 'the shining',
-    author: 'stephen king',
+    title: 'The shining',
+    author: 'Stephen King',
     id: 2,
   },
   {
-    title: 'the stand',
-    author: 'stephen king',
+    title: 'The Alchemist',
+    author: 'Paulo Coelho',
     id: 3,
   },
 ];
