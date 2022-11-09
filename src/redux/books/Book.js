@@ -1,6 +1,7 @@
 // Actions
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
+const GET_BOOKS = 'GET_BOOKS';
 
 // action creators
 const addBook = (book) => ({
