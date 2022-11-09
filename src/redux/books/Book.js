@@ -16,24 +16,7 @@ const removeBook = (id) => ({
 export { addBook, removeBook };
 
 // Reducer
-const initialState = [
-  {
-    title: 'Divergent',
-    author: 'Veronica Roth',
-    id: 1,
-  },
-  {
-    title: 'The shining',
-    author: 'Stephen King',
-    id: 2,
-  },
-  {
-    title: 'The Alchemist',
-    author: 'Paulo Coelho',
-    id: 3,
-  },
-];
-
+const initialState = [];
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
