@@ -1,9 +1,9 @@
 import React from 'react';
-import BookItem from './BookItem';
+import BookIem from './BookItem';
 
 const BookList = () => (
   <ul>
-    <BookItem />
+    <BookIem />
   </ul>
 );
 

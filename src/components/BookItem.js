@@ -1,15 +1,22 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/Book';
 
-const BookIem = () => (
-  <li>
-    <div>
-      <div>
-        <h3>Title 1</h3>
-        <p>Author 1</p>
-      </div>
-      <button type="button">Remove</button>
-    </div>
-  </li>
-);
+const BookIem = () => {
+  const dispatch = useDispatch();
+  const handleRemoveBook = (id) => {
+    dispatch(removeBook(id));
+  };
+  const books = useSelector((state) => state.books);
+  return (
+    books.map((book) => (
+      <li key={book.id}>
+        <h3>{book.title}</h3>
+        <p>{book.author}</p>
+        <button type="button" onClick={() => handleRemoveBook(book.id)}>Remove Book</button>
+      </li>
+    ))
+  );
+};
 
 export default BookIem;
