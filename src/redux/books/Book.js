@@ -15,7 +15,16 @@ const removeBook = (id) => ({
   payload: id,
 });
 
-export { addBook, removeBook };
+const getBooks = () => async (dispatch) => {
+  const response = await fetch(API_URL);
+  const data = await response.json();
+  dispatch({
+    type: GET_BOOKS,
+    payload: data,
+  });
+};
+
+export { addBook, removeBook, getBooks };
 
 // Reducer
 const initialState = [];
