@@ -1,44 +1,43 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/Book';
+import { addBookAsync } from '../redux/books/Book';
 
 const BookInput = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
-  const handleSubmit = (e) => {
+
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const handleAuthorChange = (e) => {
+    setAuthor(e.target.value);
+  };
+  const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
       id: uuidv4(),
       title,
       author,
+      category,
     };
-    dispatch(addBook(newBook));
     setTitle('');
     setAuthor('');
+    setCategory('');
+    dispatch(addBookAsync(newBook));
   };
+
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Book Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Author"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-          required
-        />
+      <form onSubmit={submitBookToStore}>
+        <input type="text" placeholder="Title" value={title} onChange={handleTitleChange} required />
+        <input type="text" placeholder="Author" value={author} onChange={handleAuthorChange} required />
         <button type="submit">Add Book</button>
       </form>
     </div>
   );
 };
-
 export default BookInput;

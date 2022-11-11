@@ -55,7 +55,9 @@ export const addBookAsync = ({
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  dispatch(addBook(id, title, author, category));
+  dispatch(addBook({
+    id, title, author, category,
+  }));
 };
 
 export const removeBookAsync = (id) => async (dispatch) => {
