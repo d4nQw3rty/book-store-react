@@ -14,8 +14,7 @@ body {
 
 .header-bg {
   display: flex;
-  align-items: center;
-  height: 5.938rem;
+  align-items: center; 
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: #fff;
   border-bottom: solid 1px #e8e8e8;
@@ -72,4 +71,37 @@ body {
 
 .user-icon {
   color: rgb(2, 144, 255);
+}
+
+.book-card {
+  margin: 2.313rem 5% 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  list-style: none;
+}
+
+.Title { 
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.Author {
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
 }
