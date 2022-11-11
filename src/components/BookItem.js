@@ -16,6 +16,7 @@ const BookIem = () => {
   return (
     books.map((book) => (
       <li key={book.id} className="book-card">
+        <p className="Category">{book.category}</p>
         <h2 className="Title">{book.title}</h2>
         <p className="Author">{book.author}</p>
         <button type="button" onClick={() => handleRemoveBook(book)}>Remove Book</button>
