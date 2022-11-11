@@ -16,9 +16,9 @@ body {
   display: flex;
   align-items: center;
   height: 5.938rem;
-  margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: #fff;
+  border-bottom: solid 1px #e8e8e8;
 }
 
 .list {
@@ -62,4 +62,14 @@ body {
 
 .active {
   opacity: 100%;
+}
+
+.ico-container {
+  display: flex;
+  flex: 1;
+  justify-content: end;
+}
+
+.user-icon {
+  color: rgb(2, 144, 255);
 }
