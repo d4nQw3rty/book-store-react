@@ -8,12 +8,14 @@ import Categories from './components/Categories';
 // import Categories from './components/Categories';
 
 const App = () => (
-  <Router className="App">
-    <Navbar />
-    <Routes>
-      <Route path="/" exact element={<BooksContainer />} />
-      <Route path="/categories" element={<Categories />} />
-    </Routes>
+  <Router>
+    <div className="panel-bg">
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<BooksContainer />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </div>
   </Router>
 );
 
