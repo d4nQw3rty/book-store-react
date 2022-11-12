@@ -209,3 +209,71 @@ body {
   letter-spacing: -0.4px;
   color: #121212;
 }
+
+.Form-Title {
+  margin: 0 5% 2%;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.Form-Container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  margin-top: 4rem;
+}
+
+.Form {
+  display: flex;
+  margin: 0 5% 25%;
+  gap: 2.5%;
+  height: 50px;
+}
+
+.Input-Book {
+  padding: 1.8%;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.input-title {
+  flex: 3;
+}
+
+.Add-Button {
+  width: 11.5rem;
+  height: auto;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.Add-Button:hover {
+  text-decoration: underline;
+  background-color: #0291ffc0;
+}
