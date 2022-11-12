@@ -19,7 +19,7 @@ const BookIem = () => {
     books.map((book) => (
       <li key={book.id} className="book-card">
         <div className="book-info">
-          <p className="Category">{book.category}</p>
+          <p className="Category">Category</p>
           <h2 className="Title">{book.title}</h2>
           <p className="Author">{book.author}</p>
           <button type="button" className="Delete">Comments</button>
