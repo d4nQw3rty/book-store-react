@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBookAsync } from '../redux/books/Book';
+import '../App.css';
 
 const BookInput = () => {
   const [title, setTitle] = useState('');
@@ -31,11 +32,12 @@ const BookInput = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={submitBookToStore}>
-        <input type="text" placeholder="Title" value={title} onChange={handleTitleChange} required />
-        <input type="text" placeholder="Author" value={author} onChange={handleAuthorChange} required />
-        <button type="submit">Add Book</button>
+    <div className="Form-Container">
+      <h2 className="Form-Title">ADD NEW BOOK</h2>
+      <form onSubmit={submitBookToStore} className="Form">
+        <input className="Input-Book input-title" type="text" placeholder="Title" value={title} onChange={handleTitleChange} required />
+        <input className="Input-Book" type="text" placeholder="Author" value={author} onChange={handleAuthorChange} required />
+        <button className="Add-Button" type="submit">ADD BOOK</button>
       </form>
     </div>
   );
